@@ -4,11 +4,15 @@ pipelin{
 
     stages{
         stage("compile"){
-           sh 'javac Test.java'
+            steps{
+                bat 'javac Test.java'
+            }
         }
 
         stage("run"){
-           sh 'java Test'
+             steps{
+                bat 'java Test'
+             }
         }
     }
 }
